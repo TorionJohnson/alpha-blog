@@ -1,10 +1,11 @@
-<h1>Showing article <%= @article.id %></h2>
-
-<p>
-    Title: <%= @article.title %>
-</p>
-<p>
-    Description: <%= @article.description %>
-</p>
-<%= link_to "Edit this article", edit_article_path(@article) %> |
-<%= link_to "back to articles", articles_path %>
+<div class="card" style="width: 25rem; margin-top: 20px;">
+    <div class="card-body">
+        <h5 class="card-title"><%= @article.title %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Description:</h6>
+        <p class="card-text">
+            <%= @article.description %>
+        </p>
+        <%= link_to "Edit this article", edit_article_path(@article), class:"card-link btn btn-primary" %>
+        <%= link_to "View all articles", articles_path, class:"card-link btn btn-primary" %>
+    </div>
+</div>
